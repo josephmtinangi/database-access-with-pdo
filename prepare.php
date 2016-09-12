@@ -23,4 +23,8 @@ $stmt->execute();
 
 // 4. Fetch Data
 
-$albums = $stmt->fetchAll();
+$albums = $stmt->fetchAll(PDO::FETCH_CLASS, 'Album');
+
+class Album {}
+
+var_dump($albums);
